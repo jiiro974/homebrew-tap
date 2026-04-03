@@ -7,41 +7,29 @@ class Pafw < Formula
   on_macos do
     on_arm do
       url "https://github.com/jiiro974/pafw-releases/releases/download/v0.1.0/pafw-darwin-arm64.tar.gz"
-      sha256 "a33500ff83cbb47f6bad6e0f31a291fd5a720e82064a519b128fc3ee57b8bba5"
-
-      def install
-        bin.install Dir["pafw-darwin-arm64/*"]
-      end
+      sha256 "1390ed0684d88ee0203761a0b90d0e724d2212cc4bc72b27433f41dd498bb202"
     end
 
     on_intel do
       url "https://github.com/jiiro974/pafw-releases/releases/download/v0.1.0/pafw-darwin-amd64.tar.gz"
-      sha256 "1662b8d83cb2a003ef2746882f578c0cb3e9fd0fd21bde7a7f346798017263d6"
-
-      def install
-        bin.install Dir["pafw-darwin-amd64/*"]
-      end
+      sha256 "df18528e509bc912a23a73e8405de2f4e26fdacae365486dce7a391165f4cffb"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/jiiro974/pafw-releases/releases/download/v0.1.0/pafw-linux-arm64.tar.gz"
-      sha256 "597df04ce3bc90be64e1cc47f87803301e75619dd2f39ebc063a7c32d23d934a"
-
-      def install
-        bin.install Dir["pafw-linux-arm64/*"]
-      end
+      sha256 "d91f7a11a2c46f93d05e5f1c667d53695495adc833e02be7f2276c9cbe1fd32e"
     end
 
     on_intel do
       url "https://github.com/jiiro974/pafw-releases/releases/download/v0.1.0/pafw-linux-amd64.tar.gz"
-      sha256 "1b6c20cf64e62cbbb17f7f096aea637c2180b178030dca24f718007e1a3a3bcf"
-
-      def install
-        bin.install Dir["pafw-linux-amd64/*"]
-      end
+      sha256 "a3b1c04fc582223bbeee3e1d071924e7579b5f0f34e3123cbdca9e14641a2c9a"
     end
+  end
+
+  def install
+    bin.install Dir["pa*"]
   end
 
   test do
