@@ -1,28 +1,28 @@
 class Pafw < Formula
-  desc "CLI tools for Palo Alto Networks firewalls"
-  homepage "https://github.com/jiiro974/pafw-releases"
-  version "0.3.1"
-  license "MIT"
+  desc "CLI tools for Palo Alto Networks firewalls - Pragma-TIC"
+  homepage "https://www.pragma-tic.org"
+  version "0.3.2"
+  license :cannot_represent
 
   on_macos do
     on_arm do
-      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.3.1/pafw-darwin-arm64.tar.gz"
-      sha256 "34cd467300784d0d3da7d455a1fa8209c21f624b657f7fb7c8ed28c97e3d4d36"
+      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.3.2/pafw-darwin-arm64.tar.gz"
+      sha256 "501109a4da8af0cbbac7b4d42b8e2b71b866043ad2876fa862b0e55d60c80eb9"
     end
     on_intel do
-      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.3.1/pafw-darwin-amd64.tar.gz"
-      sha256 "aa9c24f103a20d31c0c46f76d793ead912285762896a2d9d6a6fe85e9cfdbba7"
+      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.3.2/pafw-darwin-amd64.tar.gz"
+      sha256 "a9cffc5e01151771e04837ca9a06d55be84e903d6fb4e169b3cc272784f9ad3e"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.3.1/pafw-linux-arm64.tar.gz"
-      sha256 "50596fedb7e7206ff5658f1674f86cca3b0ec244b542e6213be1f21064c77265"
+      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.3.2/pafw-linux-arm64.tar.gz"
+      sha256 "4f10621c938bfa4e3057848f0fef60ec7f325a6f9b07e2b79d25ea0c58c73bfe"
     end
     on_intel do
-      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.3.1/pafw-linux-amd64.tar.gz"
-      sha256 "05d2166989c6f741cd19ca8f00ab5451a72fc17a974067f3e683e784f1184139"
+      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.3.2/pafw-linux-amd64.tar.gz"
+      sha256 "21e7054aa5fd8fcf12cb3aa82801057eeb68723326ae36f33eb937c29de33fcd"
     end
   end
 
@@ -31,16 +31,10 @@ class Pafw < Formula
     %w[paping patrace paif paroute paarp pasession pafib pacounter pacap pagp].each do |cmd|
       bin.install_symlink "pafw" => cmd
     end
-    zsh_completion.install_script("pafw", "--completion", "zsh") rescue nil
-  end
-
-  def post_install
-    # Generate completion if possible
-    system "#{bin}/pafw", "completion", "zsh" rescue nil
   end
 
   test do
-    assert_match "v0.3.1", shell_output("#{bin}/pafw --version")
-    assert_match "v0.3.1", shell_output("#{bin}/paping --version")
+    assert_match "v0.3.2", shell_output("#{bin}/pafw --version")
+    assert_match "Pragma-TIC", shell_output("#{bin}/pafw --version")
   end
 end
