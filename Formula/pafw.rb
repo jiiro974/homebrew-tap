@@ -1,30 +1,30 @@
 class Pafw < Formula
   desc "CLI tools for Palo Alto Networks firewalls"
   homepage "https://github.com/jiiro974/pafw-releases"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.1.0/pafw-darwin-arm64.tar.gz"
-      sha256 "1390ed0684d88ee0203761a0b90d0e724d2212cc4bc72b27433f41dd498bb202"
+      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.1.1/pafw-darwin-arm64.tar.gz"
+      sha256 "4670d6f5c55ef1977bbe16a80e02e19abc00640867550e85188fe9d0870b0a21"
     end
 
     on_intel do
-      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.1.0/pafw-darwin-amd64.tar.gz"
-      sha256 "df18528e509bc912a23a73e8405de2f4e26fdacae365486dce7a391165f4cffb"
+      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.1.1/pafw-darwin-amd64.tar.gz"
+      sha256 "e336939fe8e874c868f13e5fa768647bc3939363ba4152a490acf6aa7afc5f85"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.1.0/pafw-linux-arm64.tar.gz"
-      sha256 "d91f7a11a2c46f93d05e5f1c667d53695495adc833e02be7f2276c9cbe1fd32e"
+      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.1.1/pafw-linux-arm64.tar.gz"
+      sha256 "c653353a04587737b3a3ac45784bae889301b4fa6312f870f475fb55dd883b1c"
     end
 
     on_intel do
-      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.1.0/pafw-linux-amd64.tar.gz"
-      sha256 "a3b1c04fc582223bbeee3e1d071924e7579b5f0f34e3123cbdca9e14641a2c9a"
+      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.1.1/pafw-linux-amd64.tar.gz"
+      sha256 "5be225b881807ccf3f5ed4c205466cda52c105ba91f99f545b1e323b5aced5c4"
     end
   end
 
@@ -33,6 +33,6 @@ class Pafw < Formula
   end
 
   test do
-    assert_match "pafw", shell_output("#{bin}/pafw --version")
+    assert_match "v0.1.1", shell_output("#{bin}/pafw --version")
   end
 end
