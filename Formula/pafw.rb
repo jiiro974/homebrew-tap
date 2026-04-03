@@ -7,22 +7,22 @@ class Pafw < Formula
   on_macos do
     on_arm do
       url "https://github.com/jiiro974/pafw-releases/releases/download/v0.3.2/pafw-darwin-arm64.tar.gz"
-      sha256 "501109a4da8af0cbbac7b4d42b8e2b71b866043ad2876fa862b0e55d60c80eb9"
+      sha256 "21105dc90626bf8793b567329ee1d8b1dd04a56522f73290e64a95e1a3fec46d"
     end
     on_intel do
       url "https://github.com/jiiro974/pafw-releases/releases/download/v0.3.2/pafw-darwin-amd64.tar.gz"
-      sha256 "a9cffc5e01151771e04837ca9a06d55be84e903d6fb4e169b3cc272784f9ad3e"
+      sha256 "325d607b9b64e22cc37fa237a2711a54247025d01c9c998c33a154c0d68acc40"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/jiiro974/pafw-releases/releases/download/v0.3.2/pafw-linux-arm64.tar.gz"
-      sha256 "4f10621c938bfa4e3057848f0fef60ec7f325a6f9b07e2b79d25ea0c58c73bfe"
+      sha256 "dd808f926f26d1e83b32a354c39441d1c66ceb2765f8ab062f4cda01d8a70d5e"
     end
     on_intel do
       url "https://github.com/jiiro974/pafw-releases/releases/download/v0.3.2/pafw-linux-amd64.tar.gz"
-      sha256 "21e7054aa5fd8fcf12cb3aa82801057eeb68723326ae36f33eb937c29de33fcd"
+      sha256 "21c296d1a3a1e8348f9505c7ec879e6559eb09e2926f30f25ef27985e6d99cb6"
     end
   end
 
