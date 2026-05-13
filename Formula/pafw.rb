@@ -1,40 +1,40 @@
 class Pafw < Formula
   desc "CLI tools for Palo Alto Networks firewalls - Pragma-TIC"
   homepage "https://www.pragma-tic.org"
-  version "0.3.2"
+  version "0.3.3"
   license :cannot_represent
 
   on_macos do
     on_arm do
-      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.3.2/pafw-darwin-arm64.tar.gz"
-      sha256 "21105dc90626bf8793b567329ee1d8b1dd04a56522f73290e64a95e1a3fec46d"
+      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.3.3/pafw-darwin-arm64.tar.gz"
+      sha256 "1e803bf2d442efdc55aa014da4792233382008034758cdfa425ae3dbe68461f1"
     end
     on_intel do
-      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.3.2/pafw-darwin-amd64.tar.gz"
-      sha256 "325d607b9b64e22cc37fa237a2711a54247025d01c9c998c33a154c0d68acc40"
+      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.3.3/pafw-darwin-amd64.tar.gz"
+      sha256 "30c88ee7a6d37d5a7c384f10ee9a566a637bb39ebea5addd38f4a3d15d5a4820"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.3.2/pafw-linux-arm64.tar.gz"
-      sha256 "dd808f926f26d1e83b32a354c39441d1c66ceb2765f8ab062f4cda01d8a70d5e"
+      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.3.3/pafw-linux-arm64.tar.gz"
+      sha256 "4a802ddede4877e25c345848ccf9c57392d1320a1cd1e08b04f9abe3b7a75f0a"
     end
     on_intel do
-      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.3.2/pafw-linux-amd64.tar.gz"
-      sha256 "21c296d1a3a1e8348f9505c7ec879e6559eb09e2926f30f25ef27985e6d99cb6"
+      url "https://github.com/jiiro974/pafw-releases/releases/download/v0.3.3/pafw-linux-amd64.tar.gz"
+      sha256 "211157fc6e877226afdc2d2f56b09a41597df97e907df7cff792411b00cbcf4b"
     end
   end
 
   def install
     bin.install "pafw"
-    %w[paping patrace paif paroute paarp pasession pafib pacounter pacap pagp].each do |cmd|
+    %w[paping patrace paif paroute paarp pasession pafib pacounter pacap pagp palog].each do |cmd|
       bin.install_symlink "pafw" => cmd
     end
   end
 
   test do
-    assert_match "v0.3.2", shell_output("#{bin}/pafw --version")
+    assert_match "v0.3.3", shell_output("#{bin}/pafw --version")
     assert_match "Pragma-TIC", shell_output("#{bin}/pafw --version")
   end
 end
