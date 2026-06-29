@@ -1,33 +1,34 @@
 class Pafw < Formula
   desc "CLI tools for Palo Alto Networks firewalls"
   homepage "https://github.com/jiiro974/pafw"
-  version "0.5.0-4-g7b1554f"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/jiiro974/pafw-releases/releases/download/v#{version}/pafw-darwin-arm64.tar.gz"
-      sha256 "1f6daa3dc64e91f6e750e7d2d1846744bbe12057d320934cef9e7c27e6b5ab49" # darwin-arm64
+      sha256 "26fa52fb0f366c1b7e7fb10f62640fa532a79b8c782d6e2dfe89210bc5fcf90f" # darwin-arm64
     end
     on_intel do
       url "https://github.com/jiiro974/pafw-releases/releases/download/v#{version}/pafw-darwin-amd64.tar.gz"
-      sha256 "522ea701bda4c577a40cf3d23e15d93aa6678e0d42193404f1bf93e44b8715e9" # darwin-amd64
+      sha256 "8fcf3aecb69cdf4e7985794c2e5c6bcec3081c4fe423f3482a29331fd6f3bfeb" # darwin-amd64
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/jiiro974/pafw-releases/releases/download/v#{version}/pafw-linux-arm64.tar.gz"
-      sha256 "26eba8d0a4ac8784f1143452ff187da1e1d0a7e195792ac0040c464c3ce3bfc0" # linux-arm64
+      sha256 "b48e0043b73fad460e807d0e25b29815addb086166848b38bb648aaed8eea948" # linux-arm64
     end
     on_intel do
       url "https://github.com/jiiro974/pafw-releases/releases/download/v#{version}/pafw-linux-amd64.tar.gz"
-      sha256 "86eebd417981aafd8d4b37f034ca95b555fbe9934d200ea544e2d1cb46b4cb85" # linux-amd64
+      sha256 "44c20bfb4abac9029870c43a599dc68b874b5053b409bc395218dc58eae354ab" # linux-amd64
     end
   end
 
   SYMLINKS = %w[
     paping patrace paif paroute paarp pasession pafib pacounter pacap pagp palog
+    pavpn paaudit papano pacluster
   ].freeze
 
   def install
