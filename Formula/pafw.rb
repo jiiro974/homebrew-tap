@@ -6,25 +6,25 @@
 class Pafw < Formula
   desc "CLI Palo Alto Networks (Pragma-TIC) — inventaire, PAN-OS, GlobalProtect, Panorama"
   homepage "https://mini-1.tail5a7648.ts.net/pafw-releases/"
-  version "dcb3813"
+  version "11961c3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://mini-1.tail5a7648.ts.net/pafw-releases/pafw-dcb3813-darwin-arm64.tar.gz"
-      sha256 "f3238801eda1db72c09752232f20d6536c80c66f86b69223a4ed806c0819d63f"
+      url "https://mini-1.tail5a7648.ts.net/pafw-releases/pafw-11961c3-darwin-arm64.tar.gz"
+      sha256 "194d367be894d7ada80096df273655d249a36f7163a09957d6d99e71a31ab72c"
     else
-      url "https://mini-1.tail5a7648.ts.net/pafw-releases/pafw-dcb3813-darwin-amd64.tar.gz"
-      sha256 "5bb7d3614ac751b6146e798d10ab255b5fcaf3e347e05f7bd2e94116bcbccc54"
+      url "https://mini-1.tail5a7648.ts.net/pafw-releases/pafw-11961c3-darwin-amd64.tar.gz"
+      sha256 "077f592f0c544f9b4845aed535be7df982929728c6b45e0a385faf6848841c32"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://mini-1.tail5a7648.ts.net/pafw-releases/pafw-dcb3813-linux-arm64.tar.gz"
-      sha256 "c723c3728d28a453f52da00ae562d16a49d3e196815418929bec50af5f38bfc3"
+      url "https://mini-1.tail5a7648.ts.net/pafw-releases/pafw-11961c3-linux-arm64.tar.gz"
+      sha256 "2f5c1d111631f6fe5bf8aec5e3e53e6f9f3a09bc71aa92f25fe7bb177fdd7150"
     else
-      url "https://mini-1.tail5a7648.ts.net/pafw-releases/pafw-dcb3813-linux-amd64.tar.gz"
-      sha256 "1d7ad8f609a96fe800a80259e9dd16e022aa5d5ddf39f5cf9bd2b6bdbc27b44f"
+      url "https://mini-1.tail5a7648.ts.net/pafw-releases/pafw-11961c3-linux-amd64.tar.gz"
+      sha256 "5a1815d524a4b5505856edcd2830bd32f752dad266166451d4a55442b539233e"
     end
   end
 
