@@ -10,20 +10,20 @@ class Pavault < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://mini-1.tail5a7648.ts.net/pavault-releases/pavault-v0.1.12-darwin-arm64.tar.gz"
-      sha256 "2b3e39c38e912f443ef5d82ed21f22a0dc8fbe2bddd49bd61e5ab5a277033d60" # darwin-arm64
+      sha256 "17d551aef1c5e1502722e390cb77efca996092c7f6219f3b92d6aee1b0b8b1ce" # darwin-arm64
     else
       url "https://mini-1.tail5a7648.ts.net/pavault-releases/pavault-v0.1.12-darwin-amd64.tar.gz"
-      sha256 "46face99b6ea4265a118a9a3afd05a23939efd95201d10c12ae2030e53dc92f7" # darwin-amd64
+      sha256 "443ab996096f2c9228ec782653ac31c05e5326b13ff9166923595652aa7ef6f6" # darwin-amd64
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://mini-1.tail5a7648.ts.net/pavault-releases/pavault-v0.1.12-linux-arm64.tar.gz"
-      sha256 "621201577c8265168b4bba32c35d0faff331119b4b62599775384f18e647dab7" # linux-arm64
+      sha256 "36487ffa9d50d3f40322d9adbc12aaabe7ceb74b7998d353a4f58068e01a6d54" # linux-arm64
     else
       url "https://mini-1.tail5a7648.ts.net/pavault-releases/pavault-v0.1.12-linux-amd64.tar.gz"
-      sha256 "d51b36c32cf3937b3a62c1b412a669296f6d138633c95016c216787c332664d0" # linux-amd64
+      sha256 "0373837c188a9f8c85a39e734369e32b97ec427dcd646449ef59e6f5326e5a7e" # linux-amd64
     end
   end
 
