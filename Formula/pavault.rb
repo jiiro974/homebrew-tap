@@ -5,25 +5,25 @@
 class Pavault < Formula
   desc "Coffre K/V chiffré age (X25519) partagé pafw/oob-bastion"
   homepage "https://mini-1.tail5a7648.ts.net/pavault-releases/"
-  version "0.1.10"
+  version "0.1.12"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://mini-1.tail5a7648.ts.net/pavault-releases/pavault-v0.1.10-darwin-arm64.tar.gz"
-      sha256 "e7ce1c8f24940a46e471a58ec7967c64fcc20f8954c6b60231d94846b14e082c" # darwin-arm64
+      url "https://mini-1.tail5a7648.ts.net/pavault-releases/pavault-v0.1.12-darwin-arm64.tar.gz"
+      sha256 "2b3e39c38e912f443ef5d82ed21f22a0dc8fbe2bddd49bd61e5ab5a277033d60" # darwin-arm64
     else
-      url "https://mini-1.tail5a7648.ts.net/pavault-releases/pavault-v0.1.10-darwin-amd64.tar.gz"
-      sha256 "3cc33d8b69dc7b9c1e0c05d604580b0ae03b96104eff95ce8e522ecf91d4dc8c" # darwin-amd64
+      url "https://mini-1.tail5a7648.ts.net/pavault-releases/pavault-v0.1.12-darwin-amd64.tar.gz"
+      sha256 "46face99b6ea4265a118a9a3afd05a23939efd95201d10c12ae2030e53dc92f7" # darwin-amd64
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://mini-1.tail5a7648.ts.net/pavault-releases/pavault-v0.1.10-linux-arm64.tar.gz"
-      sha256 "dc4b01af3824b6707d1b433a977530c2bf094390d871ba46e86b1a75d69ef41f" # linux-arm64
+      url "https://mini-1.tail5a7648.ts.net/pavault-releases/pavault-v0.1.12-linux-arm64.tar.gz"
+      sha256 "621201577c8265168b4bba32c35d0faff331119b4b62599775384f18e647dab7" # linux-arm64
     else
-      url "https://mini-1.tail5a7648.ts.net/pavault-releases/pavault-v0.1.10-linux-amd64.tar.gz"
-      sha256 "a0506d62096f143e4ff7d02ec07c25d292551c84ddf05ee08b0ba91f06291c03" # linux-amd64
+      url "https://mini-1.tail5a7648.ts.net/pavault-releases/pavault-v0.1.12-linux-amd64.tar.gz"
+      sha256 "d51b36c32cf3937b3a62c1b412a669296f6d138633c95016c216787c332664d0" # linux-amd64
     end
   end
 
